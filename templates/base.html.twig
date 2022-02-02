@@ -43,6 +43,11 @@
                 </div>
             </nav>
         </div>
+		{% if user %}
+		<div>
+			<strong>Logged as: {{user}}</strong>
+		</div>
+		{% endif %}
     </header>
     <body>
         {% block body %}{% endblock %}
