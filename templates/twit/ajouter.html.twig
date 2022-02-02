@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter Twit{% endblock %}
+
+{% block body %}
+    <div class="">
+        {{form_start(formTwit)}}
+        {{form_widget(formTwit)}}
+        <button class="btn">Publier</button>
+        {{form_end(formTwit)}}
+    </div>
+    <br>
+
+{% endblock %}
