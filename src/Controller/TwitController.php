@@ -26,7 +26,6 @@ class TwitController extends AbstractController
     /**
      * @route("/create", name="create")
      * @param Request $request
-     * @param TwitRepository $twitRepository
      * @param EntityManagerInterface $entityManager
      * @return Response
      */
