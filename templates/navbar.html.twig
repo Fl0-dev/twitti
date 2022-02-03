@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-white">
+    <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('home') }}"><img src="{{ asset('img/logo.png') }}" width="30" height="24"></a>
+            </li>
+            <li class="nav-item">
+                
+            </li>
+            {% if app.user %}    
+                <li class="nav-item">
+                    <a class="nav-link"{#  href="{{ path('app_profil') }}" #}>Profil</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                </li>
+            {% endif %}
+            {% if app.user %}    
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_logout')}}">Déconnexion</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
