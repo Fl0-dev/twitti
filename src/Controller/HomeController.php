@@ -15,7 +15,6 @@ class HomeController extends AbstractController
         public function index(TwitRepository $twitRepository): Response
     {
         $twits = $twitRepository->findLatsTen();
-
         return $this->render('home/home.html.twig', [
             'twits' => $twits,
         ]);

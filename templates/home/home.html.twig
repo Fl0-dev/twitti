@@ -13,7 +13,7 @@
             <div class="container-lg d-grid gap-3 ">
                 {% for twit in twits %}
                         <div class="container text-white bg-danger shadow-lg" style="max-width: 65rem;">
-                            <div class="card-header d-grid gap-3 ">User 1</div>
+                            <div class="card-header d-grid gap-3 ">{{ twit.user.username }}</div>
                             <div class="card-body d-grid gap-3">
                                 <p class="card-text text-center ">{{ twit.content }} </p>
 

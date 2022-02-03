@@ -44,6 +44,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $twits;
 
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $username;
+
     public function __construct()
     {
         $this->twits = new ArrayCollection();
@@ -164,6 +169,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $twit->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function setUsername(?string $username): self
+    {
+        $this->username = $username;
 
         return $this;
     }
