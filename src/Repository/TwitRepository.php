@@ -19,6 +19,15 @@ class TwitRepository extends ServiceEntityRepository
         parent::__construct($registry, Twit::class);
     }
 
+    public function findLatsTen (){
+        return $this->createQueryBuilder('t')
+            ->orderBy('t.createdAt', 'DESC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
+
+
     // /**
     //  * @return Twit[] Returns an array of Twit objects
     //  */
