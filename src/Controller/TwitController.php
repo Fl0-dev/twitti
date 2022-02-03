@@ -13,8 +13,12 @@ class TwitController extends AbstractController
      */
     public function index(): Response
     {
+
         return $this->render('twit/index.html.twig', [
             'controller_name' => 'TwitController',
+
         ]);
     }
+
+
 }
