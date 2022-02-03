@@ -1,0 +1,9 @@
+.login {
+	text-align: center;
+	width: 25rem;
+	margin: 2rem auto;
+}
+
+.login > input {
+	margin-bottom: 2rem;
+}
