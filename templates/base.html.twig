@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        {{include("navbar.html.twig")}}
+        {% block header %} {{include("navbar.html.twig")}} {% endblock header %}
         {% block body %}{% endblock %}
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
